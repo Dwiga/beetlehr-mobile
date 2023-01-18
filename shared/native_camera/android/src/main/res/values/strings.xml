@@ -1,0 +1,12 @@
+<resources>
+    <string name="title_activity_camera">CameraActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="camera_fragment_label">Camera Fragment</string>
+    <string name="permission_fragment_label">Permission Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="switch_camera_button_alt">Switch camera</string>
+    <string name="capture_button_alt">Capture</string>
+    <string name="gallery_button_alt">Gallery</string>
+    <string name="overlay_image">Overlay Image</string>
+</resources>

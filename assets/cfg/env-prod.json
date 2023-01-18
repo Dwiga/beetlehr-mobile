@@ -1,0 +1,7 @@
+{
+    "base_url": "https://demo.beetlehr.com/api/v1",
+    "app_name": "BeetleHR",
+    "company_name": "PT Koding Kreasi Indonesia",
+    "company_logo": "assets/images/beetlehr_logo.png",
+    "url_editable": true
+}

@@ -1,0 +1,74 @@
+name: dependencies
+description: A new Flutter package project.
+version: 0.0.2
+homepage: "https://kodingworks.io/"
+
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dartz: ^0.10.0-nullsafety.1
+  dio: ^4.0.4
+  equatable: ^2.0.3
+  flutter_bloc: ^7.0.1
+  flutter_html: ^2.2.1
+  formz: ^0.4.0-nullsafety.0
+  get_it: ^7.2.0
+  hive: ^2.0.5
+  image_picker: ^0.8.4+8
+  path_provider: ^2.0.8
+  file_picker: ^4.3.3
+  rxdart: ^0.27.3
+  open_file: ^3.2.1
+  pdf: ^3.7.1
+  firebase_core: ^1.12.0
+  firebase_messaging: ^11.2.6
+  firebase_crashlytics: ^2.5.1
+  firebase_performance: ^0.8.0+5
+  firebase_analytics: ^9.1.0
+  root_detector: ^0.0.6
+  geolocator: ^8.1.1
+  firebase_remote_config: ^2.0.0
+  package_info: ^2.0.2
+  url_launcher: ^6.0.18
+  shimmer: ^2.0.0
+  intl: ^0.17.0
+  google_maps_flutter: ^2.1.1
+  timeline_tile: ^2.0.0
+  permission_handler: ^8.3.0
+  flutter_downloader: ^1.7.2
+  flutter_local_notifications: ^9.2.0
+  internet_connection_checker: ^0.0.1+3
+  sentry_flutter: ^6.3.0
+  flutter_pdfview: ^1.2.1
+  workmanager: ^0.4.1
+  shared_preferences: ^2.0.13
+  slide_to_act: ^2.0.1
+  page_transition: ^2.0.5
+  flutter_linkify: ^5.0.2
+  syncfusion_flutter_datepicker: ^19.2.44
+  flutter_typeahead: ^3.2.3
+  dotted_border: ^2.0.0+1
+  autocomplete_textfield: ^2.0.0
+  percent_indicator: ^3.4.0
+  dropdown_button2: ^1.4.0
+  flutter_device_id:
+    path: ../flutter_device_id
+  native_camera:
+    path: ../native_camera
+  background_locator:
+    path: ../background_locator
+
+dependency_overrides:
+  platform: ^3.1.0
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:

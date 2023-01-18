@@ -1,0 +1,33 @@
+name: files
+description: A new Flutter package project.
+version: 0.0.2
+homepage: "https://kodingworks.io/"
+
+publish_to: none
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  component:
+    path: ../../shared/component
+  dependencies:
+    path: ../../shared/dependencies
+  l10n:
+    path: ../../shared/l10n
+  preferences:
+    path: ../../shared/preferences
+  core: 
+    path: ../../core
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  effective_dart: ^1.3.1
+
+flutter:

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="space.wisnuwiry.native_camera">
+
+    <!-- Declare features -->
+    <uses-feature android:name="android.hardware.camera.front" android:required="true" />
+
+    <!-- Declare permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+</manifest>

@@ -1,0 +1,41 @@
+import 'dart:ui';
+
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+
+import 'keys.dart';
+
+@pragma('vm:entry-point')
+void callbackDispatcher() {
+  const MethodChannel _backgroundChannel =
+      MethodChannel(Keys.BACKGROUND_CHANNEL_ID);
+  WidgetsFlutterBinding.ensureInitialized();
+
+  _backgroundChannel.setMethodCallHandler((MethodCall call) async {
+    if (Keys.BCM_NOTIFICATION_CLICK == call.method) {
+      final Map<dynamic, dynamic> args = call.arguments;
+      final Function? notificationCallback =
+          PluginUtilities.getCallbackFromHandle(CallbackHandle.fromRawHandle(
+              args[Keys.ARG_NOTIFICATION_CALLBACK]));
+      if (notificationCallback != null) {
+        notificationCallback();
+      }
+    } else if (Keys.BCM_INIT == call.method) {
+      final Map<dynamic, dynamic> args = call.arguments;
+      final Function? initCallback = PluginUtilities.getCallbackFromHandle(
+          CallbackHandle.fromRawHandle(args[Keys.ARG_INIT_CALLBACK]));
+      Map<dynamic, dynamic>? data = args[Keys.ARG_INIT_DATA_CALLBACK];
+      if (initCallback != null) {
+        initCallback(data);
+      }
+    } else if (Keys.BCM_DISPOSE == call.method) {
+      final Map<dynamic, dynamic> args = call.arguments;
+      final Function? disposeCallback = PluginUtilities.getCallbackFromHandle(
+          CallbackHandle.fromRawHandle(args[Keys.ARG_DISPOSE_CALLBACK]));
+      if (disposeCallback != null) {
+        disposeCallback();
+      }
+    }
+  });
+  _backgroundChannel.invokeMethod(Keys.METHOD_SERVICE_INITIALIZED);
+}

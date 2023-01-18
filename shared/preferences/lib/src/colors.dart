@@ -1,0 +1,55 @@
+// ignore_for_file: public_member_api_docs
+import 'package:flutter/cupertino.dart';
+
+class StaticColors {
+  static const Color green = Color(0xFF00C292);
+  static const Color yellow = Color(0xFFFBBC04);
+  static const Color orange = Color(0xFFFFAD61);
+  static const Color red = Color(0xFFF15B5D);
+  static const Color indigo = Color(0xFFC159F2);
+  static const Color pink = Color(0xFFF09FFE);
+  static const Color blue = Color(0xFF70A8BF);
+  static const Color lightBlue = Color(0xFF59B2F2);
+  static const Color grey = Color(0xFF7D7D7D);
+  static const Color calendula = Color(0xffFFD666);
+  static const Color dustRed = Color(0xffF5222D);
+  static const Color polarGreen = Color(0xff73D13D);
+  static const Color primaryBlue = Color(0xff4F8CF6);
+  static const Color disableBlue = Color(0xff59B2F2);
+  static const Color disabledColor2 = Color(0xffCACCCF);
+  static const Color dividerColor = Color(0xffF5F5F5);
+  static const Color disabledColor3 = Color(0xffF0F0F0);
+  static const Color sunriseYellow = Color(0xffFADB14);
+  static const Color black6 = Color(0xff3C3C3C);
+  static const Color black5 = Color(0xffE8E8E8);
+  static const Color black4 = Color(0xffCACCCF);
+  static const Color black3 = Color(0xffA0A4A8);
+  static const Color black2 = Color(0xff52575C);
+  static const Color black1 = Color(0xff333333);
+  static const Color black0 = Color(0xff222222);
+  static const Color polarGreen6 = Color(0xff52C41A);
+  static const Color success10 = Color(0xff57CB93);
+  static const Color blueRadio = Color(0xffD9D9D9);
+  static const Color neutral2 = Color(0XFFFAFAFA);
+  static const Color grey1 = Color(0xffF8F8F8);
+  static const Color blackText = Color(0xff52575C);
+  static const Color lockGreen = Color(0xff52C41A);
+  static const Color alertColor = Color(0xffFFB800);
+  static const Color textRed = Color(0xffF5222D);
+  static const Color black900 = Color(0xff333333);
+  static const Color dustRed1 = Color(0xffFFF1F0);
+  static const Color radioUnselected = Color(0xffD9D9D9);
+  static const Color dustRed6 = Color(0xffED2939);
+  static const Color boxColor = Color(0xff050000);
+  static const Color blackTextColor = Color(0xff222222);
+  static const Color backgroundWhite1 = Color(0xffFAFAFA);
+  static const Color greyDivider = Color(0xffF8F8F8);
+  static const Color lightPolarGreen = Color(0xffF6FFED);
+  static const Color ongoingColor = Color(0xffFAAD14);
+  static const Color volcano = Color(0xffFFF2E8);
+  static const Color volcano6 = Color(0xffFA541C);
+  static const Color pendingColor = Color(0xffFF8E56);
+  static const Color mediumColor = Color(0xffFFF7E6);
+  static const Color lightGrey = Color(0xFFF5F5F5);
+  static const Color lightGreen = Color(0xFF57CB93);
+}

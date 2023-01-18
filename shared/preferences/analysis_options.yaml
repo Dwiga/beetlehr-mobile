@@ -1,0 +1,16 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude: 
+    - lib/server/*.g.dart
+    - test/_data/**
+    - build/**
+    - lib/generated/**
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+
+linter:
+  rules:
+    public_member_api_docs: false
+    avoid_catches_without_on_clauses: false
+    avoid_classes_with_only_static_members: false
