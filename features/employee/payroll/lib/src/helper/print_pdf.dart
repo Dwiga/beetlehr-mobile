@@ -2,7 +2,6 @@ import 'dart:typed_data';
 
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:files/files.dart';
