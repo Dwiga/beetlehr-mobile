@@ -2552,11 +2552,31 @@ class S {
     );
   }
 
-  /// `Pilih Year`
+  /// `Select Year`
   String get select_year {
     return Intl.message(
-      'Pilih Year',
+      'Select Year',
       name: 'select_year',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Approval Request`
+  String get approval_request {
+    return Intl.message(
+      'Approval Request',
+      name: 'approval_request',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Declined`
+  String get declined {
+    return Intl.message(
+      'Declined',
+      name: 'declined',
       desc: '',
       args: [],
     );

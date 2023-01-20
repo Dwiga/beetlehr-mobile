@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_setting":
             MessageLookupByLibrary.simpleMessage("Pengaturan Aplikasi"),
         "apply": MessageLookupByLibrary.simpleMessage("Terapkan"),
+        "approval_request":
+            MessageLookupByLibrary.simpleMessage("Permintaan Persetujuan"),
         "approval_request_approved_message":
             MessageLookupByLibrary.simpleMessage(
                 "Pengajuan Telah Anda Setujui"),
@@ -135,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "date_change":
             MessageLookupByLibrary.simpleMessage("Perubahan Tanggal"),
         "days": MessageLookupByLibrary.simpleMessage("Hari"),
+        "declined": MessageLookupByLibrary.simpleMessage("Ditolak"),
         "delete": MessageLookupByLibrary.simpleMessage("Hapus"),
         "department": MessageLookupByLibrary.simpleMessage("Departemen"),
         "description": MessageLookupByLibrary.simpleMessage("Deskripsi"),

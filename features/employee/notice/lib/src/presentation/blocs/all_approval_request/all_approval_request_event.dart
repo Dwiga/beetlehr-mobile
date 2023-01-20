@@ -5,7 +5,7 @@ abstract class AllApprovalRequestEvent extends Equatable {}
 class FetchAllApprovalRequestEvent extends AllApprovalRequestEvent {
   final int perPage;
   final int page;
-  final String sortBy;
+  final String? sortBy;
   final String? requestType;
   final String? startTime;
   final String? endTime;
@@ -16,10 +16,10 @@ class FetchAllApprovalRequestEvent extends AllApprovalRequestEvent {
       {required this.perPage,
       required this.page,
       required this.sortBy,
-      required this.requestType,
+      this.requestType,
       required this.startTime,
       required this.endTime,
-      required this.employee,
+      this.employee,
       required this.status});
 
   @override

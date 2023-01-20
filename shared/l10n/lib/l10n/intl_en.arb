@@ -189,10 +189,8 @@
     "allow": "Allow",
     "cannot_retrive_location_message": "Unable to retrieve the current location, try to recheck the location is active and also the permissions.",
     "confirmation_set_complete_todo": "Are you sure the {todo} task is complete?",
-   
     "work_from_office": "Work From Office",
     "work_from_anywhere": "Work From Anywhere",
-   
     "move_offline": "Move Offline",
     "move_online": "Move Online",
     "connected_to_network": "Connected to the Network",
@@ -254,5 +252,7 @@
     "payroll_list_empty": "There seems to be no payroll for you to view",
     "apply": "Apply",
     "select_month": "Select Month",
-    "select_year": "Pilih Year"
+    "select_year": "Select Year",
+    "approval_request": "Approval Request",
+    "declined": "Declined"
 }

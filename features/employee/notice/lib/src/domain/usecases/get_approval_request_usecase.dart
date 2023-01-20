@@ -17,10 +17,10 @@ class GetApprovalRequestUseCase
         perPage: params.perPage,
         page: params.page,
         sortBy: params.orderBy,
-        requestType: params.requestType,
+        requestType: null,
         startTime: params.startTime,
         endTime: params.endTime,
-        employee: params.employee,
+        employee: null,
         status: params.status);
   }
 }
@@ -29,19 +29,15 @@ class ApprovalRequestParams {
   final int perPage;
   final int page;
   final String orderBy;
-  final String? requestType;
   final String? startTime;
   final String? endTime;
-  final String? employee;
   final ApprovalRequestType? status;
 
   ApprovalRequestParams(
       {required this.perPage,
       required this.page,
       required this.orderBy,
-      this.requestType,
       this.startTime,
       this.endTime,
-      this.employee,
       this.status});
 }

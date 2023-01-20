@@ -7,20 +7,14 @@ import '../../../../../notice.dart';
 import 'sections.dart';
 
 class FilterDialogPage extends StatefulWidget {
-  final String? requestTypeValue;
   final String? sortByValue;
-  final String? employeeName;
   final ApprovalTimeRangeEntity? time;
-  final List<EmployeeNameFilterEntity>? employeeList;
   final int? totalItemFilter;
 
   const FilterDialogPage({
     Key? key,
-    this.requestTypeValue,
     this.sortByValue,
-    this.employeeName,
     this.time,
-    this.employeeList,
     this.totalItemFilter,
   }) : super(key: key);
 

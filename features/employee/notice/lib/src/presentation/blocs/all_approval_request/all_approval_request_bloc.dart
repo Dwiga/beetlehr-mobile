@@ -62,11 +62,9 @@ class AllAppprovalRequestBloc
       final result = await getApprovalRequestUseCase(ApprovalRequestParams(
           perPage: event.perPage,
           page: event.page,
-          orderBy: event.sortBy,
-          requestType: event.requestType,
+          orderBy: event.sortBy.toString(),
           startTime: event.startTime,
           endTime: event.endTime,
-          employee: event.employee,
           status: event.status));
 
       yield* result.fold((l) async* {

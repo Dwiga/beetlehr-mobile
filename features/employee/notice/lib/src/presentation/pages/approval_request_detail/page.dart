@@ -123,44 +123,54 @@ class _ApprovalRequestDetailPageState extends State<ApprovalRequestDetailPage> {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        content: SizedBox(
-          height: 280,
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: Dimens.dp24),
-                child: Image.asset(
-                  'assets/images/$icon',
-                  width: Dimens.width(context) * 0.6,
-                  height: 60,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Text(textButton == S.of(context).approve
-                  ? S.of(context).approve_status_request
-                  : S.of(context).reject_status_request),
-              const SizedBox(height: 16),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16),
-                child: TextAreaInput(
-                  isRequired: textButton == S.of(context).reject,
-                  controller: _controller,
-                  minLine: 6,
-                  label: S.of(context).note,
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: const Divider(
-                    height: 1,
+        content: SingleChildScrollView(
+          child: SizedBox(
+            height: 280,
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: Dimens.dp16),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: Dimens.dp24),
+                  child: Image.asset(
+                    'assets/images/$icon',
+                    width: Dimens.width(context) * 0.6,
+                    height: 60,
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(height: Dimens.dp16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: Dimens.dp16),
+                  child: Center(
+                    child: Text(
+                      textButton == S.of(context).approve
+                          ? S.of(context).approve_status_request
+                          : S.of(context).reject_status_request,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: Dimens.dp16),
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: Dimens.dp16),
+                  child: TextAreaInput(
+                    isRequired: textButton == S.of(context).reject,
+                    controller: _controller,
+                    minLine: 6,
+                    label: S.of(context).note,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: const Divider(
+                      height: 1,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         contentPadding: const EdgeInsets.all(0.0),
@@ -190,8 +200,8 @@ class _ApprovalRequestDetailPageState extends State<ApprovalRequestDetailPage> {
                           vertical: Dimens.dp14, horizontal: Dimens.dp32),
                       child: Text(
                         S.of(context).cancel,
-                        style:
-                            const TextStyle(fontSize: 12, color: Colors.black),
+                        style: const TextStyle(
+                            fontSize: Dimens.dp12, color: Colors.black),
                       ),
                     ),
                   ),
@@ -214,7 +224,7 @@ class _ApprovalRequestDetailPageState extends State<ApprovalRequestDetailPage> {
                     child: Text(
                       textButton,
                       style: const TextStyle(
-                        fontSize: 12,
+                        fontSize: Dimens.dp12,
                       ),
                     ),
                   ),

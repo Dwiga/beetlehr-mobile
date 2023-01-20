@@ -2,9 +2,11 @@ import 'dart:typed_data';
 
 import 'package:core/core.dart';
 import 'package:dependencies/dependencies.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:files/files.dart';
+import 'package:preferences/preferences.dart';
 
 import '../../payroll.dart';
 
@@ -86,30 +88,34 @@ class PayrollHelper {
               pw.Row(
                 children: [
                   pw.Image(image, width: 75, height: 75),
-                  pw.SizedBox(width: 16),
+                  pw.SizedBox(width: Dimens.dp16),
                   pw.Text(
                     GetIt.I<GlobalConfiguration>()
                         .getValue('company_name')
                         .toString()
                         .toUpperCase(),
+                    maxLines: 2,
                     style: pw.TextStyle(
-                      fontSize: 28,
+                      fontSize: Dimens.dp24,
                       fontWeight: pw.FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-              pw.Text(
-                'SLIP GAJI',
-                style: pw.TextStyle(
-                  fontSize: 24,
-                  decoration: pw.TextDecoration.underline,
-                  fontWeight: pw.FontWeight.bold,
-                ),
-              )
             ],
           ),
-          pw.SizedBox(height: 32),
+          pw.SizedBox(height: Dimens.dp16),
+          pw.Center(
+            child: pw.Text(
+              'SLIP GAJI',
+              style: pw.TextStyle(
+                fontSize: Dimens.dp24,
+                decoration: pw.TextDecoration.underline,
+                fontWeight: pw.FontWeight.bold,
+              ),
+            ),
+          ),
+          pw.SizedBox(height: Dimens.dp16),
           _buildUserData(),
         ]);
   }
@@ -129,28 +135,28 @@ class PayrollHelper {
                 pw.Text(
                   'Name',
                   style: const pw.TextStyle(
-                    fontSize: 10,
+                    fontSize: Dimens.dp10,
                   ),
                 ),
                 pw.SizedBox(height: 2),
                 pw.Text(
                   'Designation',
                   style: const pw.TextStyle(
-                    fontSize: 10,
+                    fontSize: Dimens.dp10,
                   ),
                 ),
                 pw.SizedBox(height: 2),
                 pw.Text(
                   'Paid On',
                   style: const pw.TextStyle(
-                    fontSize: 10,
+                    fontSize: Dimens.dp10,
                   ),
                 ),
                 pw.SizedBox(height: 2),
                 pw.Text(
                   'Status',
                   style: const pw.TextStyle(
-                    fontSize: 10,
+                    fontSize: Dimens.dp10,
                   ),
                 ),
               ],
@@ -162,28 +168,28 @@ class PayrollHelper {
               pw.Text(
                 ': ${payroll.name}',
                 style: const pw.TextStyle(
-                  fontSize: 10,
+                  fontSize: Dimens.dp10,
                 ),
               ),
               pw.SizedBox(height: 2),
               pw.Text(
                 ': ${payroll.designation}',
                 style: const pw.TextStyle(
-                  fontSize: 10,
+                  fontSize: Dimens.dp10,
                 ),
               ),
               pw.SizedBox(height: 2),
               pw.Text(
                 ': $paidOn',
                 style: const pw.TextStyle(
-                  fontSize: 10,
+                  fontSize: Dimens.dp10,
                 ),
               ),
               pw.SizedBox(height: 2),
               pw.Text(
                 ': ${payrollStatus ?? ''}',
                 style: const pw.TextStyle(
-                  fontSize: 10,
+                  fontSize: Dimens.dp10,
                 ),
               ),
             ],
@@ -267,12 +273,12 @@ class PayrollHelper {
           1: pw.Alignment.centerLeft,
         },
         headerStyle: pw.TextStyle(
-          fontSize: 10,
+          fontSize: Dimens.dp10,
           fontWeight: pw.FontWeight.bold,
           color: PdfColors.white,
         ),
         cellStyle: const pw.TextStyle(
-          fontSize: 10,
+          fontSize: Dimens.dp10,
         ),
         rowDecoration: const pw.BoxDecoration(
           border: pw.Border(
@@ -327,12 +333,12 @@ class PayrollHelper {
           1: pw.FlexColumnWidth(2),
         },
         headerStyle: pw.TextStyle(
-          fontSize: 10,
+          fontSize: Dimens.dp10,
           fontWeight: pw.FontWeight.bold,
           color: PdfColors.white,
         ),
         cellStyle: const pw.TextStyle(
-          fontSize: 10,
+          fontSize: Dimens.dp10,
         ),
         rowDecoration: const pw.BoxDecoration(
           border: pw.Border(
@@ -369,7 +375,7 @@ class PayrollHelper {
 
   pw.Widget _buildBoldComponent(String title, String value) {
     return pw.Row(children: [
-      pw.SizedBox(width: 10),
+      pw.SizedBox(width: Dimens.dp10),
       pw.Expanded(
         flex: 5,
         child: pw.Text(

@@ -43,12 +43,10 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
   bool _buttonTap = false;
 
   String? sortBy;
-  String? requestType;
   List<EmployeeNameFilterEntity> employee = List.empty(growable: true);
   String? startTime;
   String? endTime;
   String? name;
-  String? id;
   int? totalItemFilter = 0;
 
   @override
@@ -68,7 +66,9 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
     _controller.addListener(_handleTabChange);
 
     _animationControllerOff = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 75));
+      vsync: this,
+      duration: const Duration(milliseconds: 75),
+    );
     _animationControllerOff.value = 1.0;
     _colorTweenBackgroundOff =
         ColorTween(begin: _backgroundOn, end: _backgroundOff)
@@ -78,7 +78,9 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
             .animate(_animationControllerOff);
 
     _animationControllerOn = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 150));
+      vsync: this,
+      duration: const Duration(milliseconds: 150),
+    );
     _animationControllerOn.value = 1.0;
     _colorTweenBackgroundOn =
         ColorTween(begin: _backgroundOff, end: _backgroundOn)
@@ -199,27 +201,21 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
                 const WaitingListApprovalPage(),
                 WaitingListApprovalPage(
                   statusLabel: ApprovalRequestType.awaiting,
-                  requestType: requestType,
                   startTime: startTime,
                   endTime: endTime,
                   sortBy: sortBy,
-                  employee: id,
                 ),
                 WaitingListApprovalPage(
                   statusLabel: ApprovalRequestType.rejected,
-                  requestType: requestType,
                   startTime: startTime,
                   endTime: endTime,
                   sortBy: sortBy,
-                  employee: id,
                 ),
                 WaitingListApprovalPage(
                   statusLabel: ApprovalRequestType.approved,
-                  requestType: requestType,
                   startTime: startTime,
                   endTime: endTime,
                   sortBy: sortBy,
-                  employee: id,
                 ),
               ],
             ),
@@ -326,10 +322,7 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
       context: context,
       isScrollControlled: true,
       builder: (context) => FilterDialogPage(
-        requestTypeValue: requestType ?? "",
         sortByValue: sortBy ?? "",
-        employeeName: name ?? "",
-        employeeList: employee,
         time: ApprovalTimeRangeEntity(
             startTime: startTime ?? "", endTime: endTime ?? ""),
         totalItemFilter: totalItemFilter,
@@ -339,17 +332,6 @@ class _ApprovalPageState extends State<ApprovalHeaderSection>
     setState(() {
       if (result is ApprovalRequestFilterEntity) {
         sortBy = result.sortBy;
-        requestType = result.requestType;
-        employee = result.employees!;
-        if (employee.isNotEmpty) {
-          for (var i = 0; i < employee.length; i++) {
-            name = employee[i].name;
-            id = employee[i].id.toString();
-          }
-        } else {
-          name = "";
-          id = "";
-        }
         startTime = result.startTime;
         endTime = result.endTime;
         totalItemFilter = result.totalItemFilter;

@@ -256,5 +256,7 @@
     "payroll_list_empty": "Sepertinya tidak ada daftar gaji yang bisa anda lihat",
     "apply": "Terapkan",
     "select_month": "Pilih Bulan",
-    "select_year": "Pilih Tahun"
+    "select_year": "Pilih Tahun",
+    "approval_request": "Permintaan Persetujuan",
+    "declined": "Ditolak"
 }

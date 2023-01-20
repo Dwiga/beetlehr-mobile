@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "app_setting":
             MessageLookupByLibrary.simpleMessage("Application Settings"),
         "apply": MessageLookupByLibrary.simpleMessage("Apply"),
+        "approval_request":
+            MessageLookupByLibrary.simpleMessage("Approval Request"),
         "approval_request_approved_message":
             MessageLookupByLibrary.simpleMessage(
                 "Request Successfully Approved"),
@@ -136,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "date_change": MessageLookupByLibrary.simpleMessage("Date Change"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "declined": MessageLookupByLibrary.simpleMessage("Declined"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
         "department": MessageLookupByLibrary.simpleMessage("Department"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
@@ -348,7 +351,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "select_leave_type":
             MessageLookupByLibrary.simpleMessage("Select Leave Type"),
         "select_month": MessageLookupByLibrary.simpleMessage("Select Month"),
-        "select_year": MessageLookupByLibrary.simpleMessage("Pilih Year"),
+        "select_year": MessageLookupByLibrary.simpleMessage("Select Year"),
         "send_otp_via": m5,
         "send_reset_link":
             MessageLookupByLibrary.simpleMessage("Send Reset Link"),

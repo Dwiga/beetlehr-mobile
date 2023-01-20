@@ -11,20 +11,16 @@ import 'content_loading_section.dart';
 class WaitingListApprovalPage extends StatefulWidget {
   final ApprovalRequestType? statusLabel;
   final String? sortBy;
-  final String? requestType;
-  final String? employee;
   final String? startTime;
   final String? endTime;
 
-  const WaitingListApprovalPage(
-      {Key? key,
-      this.statusLabel,
-      this.sortBy,
-      this.requestType,
-      this.employee,
-      this.endTime,
-      this.startTime})
-      : super(key: key);
+  const WaitingListApprovalPage({
+    Key? key,
+    this.statusLabel,
+    this.sortBy,
+    this.endTime,
+    this.startTime,
+  }) : super(key: key);
 
   @override
   State<WaitingListApprovalPage> createState() =>
@@ -52,11 +48,8 @@ class _WaitingListApprovalPageState extends State<WaitingListApprovalPage> {
   @override
   void didUpdateWidget(covariant WaitingListApprovalPage oldWidget) {
     if (widget.sortBy != oldWidget.sortBy ||
-        widget.employee != oldWidget.employee ||
-        widget.requestType != oldWidget.requestType ||
         widget.startTime != oldWidget.startTime ||
-        widget.endTime != oldWidget.endTime ||
-        widget.employee != oldWidget.employee) {
+        widget.endTime != oldWidget.endTime) {
       fetchData(1);
     }
     super.didUpdateWidget(oldWidget);
@@ -68,10 +61,8 @@ class _WaitingListApprovalPageState extends State<WaitingListApprovalPage> {
           page: page,
           perPage: 10,
           sortBy: widget.sortBy ?? "asc",
-          requestType: widget.requestType,
           startTime: widget.startTime,
           endTime: widget.endTime,
-          employee: widget.employee,
           status: widget.statusLabel),
     );
   }
