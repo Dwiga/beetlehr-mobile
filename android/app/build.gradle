@@ -50,7 +50,7 @@ android {
 
         prod {
             dimension "flavor-type"
-            applicationId "io.beetlehr.mobile"
+            applicationId "io.qerja.mobile"
             resValue "string", "app_name", "BeetleHR"
         }
     }
